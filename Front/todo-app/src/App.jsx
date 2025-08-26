@@ -22,11 +22,11 @@ function App() {
 
 
   return (
-    <>
-      <h1>Lista de tareas</h1>
+    <div className='container-app'>
+      <h1 className='container-app__title'>Lista de tareas</h1>
       <TaskForm addTask={addTask}/>
       <TaskList tasks={tasks} deleteTask={deleteTask}/>
-    </>
+    </div>
   )
 }
 

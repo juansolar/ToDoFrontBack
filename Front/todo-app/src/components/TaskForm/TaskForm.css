@@ -1,0 +1,25 @@
+.form-app{
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    height: 2rem;
+}
+
+.form-app__input{
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    outline: none;
+    color: 1e6091;
+}
+
+.form-app__button{
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #1e6091;
+    color: white;
+    width: 10%;
+    font-size: .8vw;
+}

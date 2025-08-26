@@ -1,0 +1,53 @@
+.list-app{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.list-app__title{
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.list-app__input{
+    width: 80%;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    outline: none;
+    color: 1e6091;
+}
+
+.list-app__items{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.list-app__item{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 8px;
+    font-size: 1vw;
+    height: 1.6vw;
+    align-items: center;
+    color: white;
+    border: 1px solid white;
+    padding: .5vw;
+}
+
+.item__button{
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    height: 100%;
+    color: white;
+    background-color: #ff5a5f; 
+}
+
