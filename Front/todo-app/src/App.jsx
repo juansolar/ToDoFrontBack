@@ -2,22 +2,28 @@ import { useState } from 'react';
 import './App.css';
 import { TaskForm } from './components/TaskForm/TaskForm';
 import { TaskList } from './components/TaskList/TaskList';
+import { useEffect } from 'react';
+import { getTasks, addTaskAPI, deleteTaskAPI } from './services/taskService';
 
 function App() {
   
   const [tasks, setTasks] = useState([]);
 
-  console.log(tasks)
+  //Cargar tareas
+  useEffect(() => {
+    getTasks().then(setTasks)
+  },[]);
 
   //agregar tarea
-  const addTask = (text) => {
-    const newTask = {id: Date.now(), text};
+  const addTask = async (text) => {
+    const newTask = await addTaskAPI(text);
     setTasks([...tasks,newTask]);
   }
 
   //eliminar tarea
-  const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id));
+  const deleteTask = async (id) => {
+    await deleteTaskAPI(id);
+    setTasks(tasks.filter((task) => task.id !== id))
   }
 
 
